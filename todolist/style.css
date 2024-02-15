@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: "Poppins", sans-serif;      
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background: linear-gradient(145deg, rgb(98, 0, 255), rgb(200, 0, 113));
+    padding: 10px;
+    overflow: hidden; 
+}
+
+.todo {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    border-radius: 12px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 20px; 
+    overflow: auto; 
+    max-height: calc(900vh - 102px); 
+}
+
+
+.todo h1{
+    color: rgb(75, 0, 196);
+    display: flex;
+    align-items: center; 
+    margin-bottom: 25px;
+}
+.todo img{
+    width: 30px;
+    margin-left: 10px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 26px;
+    background: rgb(226, 226, 226);
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+
+}
+button{
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: rgb(243, 0, 138);
+    padding: 15px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    
+
+}
+
+ul li{
+    user-select: none;
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+
+    
+}
+
+ul li::before{
+    content: '';
+    background-image: url(unchecked.png);
+    position: absolute;
+    background-size: cover;
+    height: 21px;
+    width: 21px;
+    left: 15px;
+    background-position: center;
+    border-radius: 50%;
+    top: 15px;
+
+}
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+.checked::before{
+    background-image: url(circle-check-solid\ \(1\).png);
+    height: 20px;
+    width: 20px;
+}
+
+ul li span{
+    right: 0;
+    position: absolute;
+    text-align: center;
+    color: red;
+    height: 40px;
+    width: 40px;
+    top: 5px;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+ul li span:hover{
+    background: rgb(243, 243, 243);
+
+}
+@media  (max-width:480px) {
+    html,body{
+        overflow-x: hidden;
+    }
+    .todo h1{
+        font-size: 28px;
+        margin-bottom:20px ;
+    }
+    .todo{
+        width: 100%;
+        margin: 50px auto 20px;
+        padding: 20px 30px 10px;
+
+    
+    }
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 26px;
+        background: rgb(226, 226, 226);
+        margin-bottom: 25px;
+        margin-left: -20px;
+        padding-left: 10px;
+
+    }
+    input{
+        flex: 1;
+        border: none;
+        outline: none;
+        background: transparent;
+    
+    }
+    
+    button{
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        background: rgb(230, 0, 130);
+        padding: 12px 30px;
+        font-size: 13px;
+        cursor: pointer;
+        color: white;
+        position: relative;
+        margin-left: -46px;
+
+    
+    }
+
+
+    ul li{
+        user-select: none;
+        list-style: none;
+        padding: 12px 8px 12px 20px;
+        cursor: pointer;
+        position: relative;
+        font-size: 13px;
+    
+        
+    }
+
+    ul li::before{
+        content: '';
+        background-image: url(unchecked.png);
+        position: absolute;
+        background-size: cover;
+        height: 15px;
+        width: 15px;
+        left: -5px;
+        background-position: center;
+        border-radius: 50%;
+        top: 15px;
+    
+    }
+    .checked::before{
+        bottom: 40px;
+        height:15px;
+        width: 15px;
+    }
+    .container {
+        width: 100%;
+        background: linear-gradient(145deg, rgb(98, 0, 255), rgb(200, 0, 113));
+        padding: 10px;
+        overflow: hidden; 
+        max-height: auto;
+    }
+    
+    .todo {
+        width: 100%;
+        max-width: 540px;
+        background: white;
+        border-radius: 12px;
+        margin: 100px auto ;
+        padding: 40px 30px ; 
+        overflow: auto; 
+        
+    }
+  
+}
